@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Ecom extends StatelessWidget {
-  const Ecom({super.key});
+  const Ecom({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

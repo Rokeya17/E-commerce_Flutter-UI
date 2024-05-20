@@ -1,8 +1,9 @@
 import 'package:ecom_ui/Screens/widgets/product_card.dart';
+import 'package:ecom_ui/utility/circular_iconbutton.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -13,7 +14,33 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.add))],
+        actions: [
+          CircularIconButton(
+            icon: Icons.add,
+            onTap: () {},
+          ),
+          const SizedBox(
+            width: 08,
+          ),
+          CircularIconButton(
+            icon: Icons.search,
+            onTap: () {},
+          ),
+          const SizedBox(
+            width: 08,
+          ),
+          CircularIconButton(
+            icon: Icons.rocket,
+            onTap: () {},
+          ),
+          const SizedBox(
+            width: 08,
+          ),
+          CircularIconButton(
+            icon: Icons.add,
+            onTap: () {},
+          ),
+        ],
       ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
