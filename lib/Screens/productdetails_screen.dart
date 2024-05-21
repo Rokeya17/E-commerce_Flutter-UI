@@ -213,20 +213,20 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          Text(
                             "Product Details",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Text(
+                          SizedBox(height: 8),
+                          Text(
                             "Being a fashion girl doesn't only mean that you meticulously follow all the celeb trends or that you wear expensive designer labels. You're also very in-tune with your personal sense of style. Simply put, you know what you like and every outfit that you wear demonstrates your own unique perspective.",
                             style: TextStyle(fontSize: 14),
                           ),
@@ -237,7 +237,52 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           //     style: TextStyle(color: AppColors.primaryColor),
                           //   ),
                           // ),
-                          Text(''),
+                          Divider(),
+                          Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Price:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('Negotiable'),
+                                  Divider(),
+                                  Text(
+                                    'Type:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('Classic shoes'),
+                                  Text(
+                                    'Material:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('Plastic Material'),
+                                  Text(
+                                    'Design:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('Modern nice'),
+                                ],
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
