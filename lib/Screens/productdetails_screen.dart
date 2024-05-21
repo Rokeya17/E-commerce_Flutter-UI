@@ -1,3 +1,4 @@
+import 'package:ecom_ui/Screens/relatedproducts_screen.dart';
 import 'package:ecom_ui/Screens/widgets/productimage_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -166,7 +167,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
           Row(
             children: sizes.asMap().entries.map((entry) {
               final index = entry.key;
@@ -199,6 +200,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               );
             }).toList(),
           ),
+          const SizedBox(
+            height: 8,
+          ),
+          const RelatedProductScreen(),
         ],
       ),
     );
@@ -232,7 +237,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ],
           ),
           SizedBox(
-            width: 120,
+            width: 150,
             child: ElevatedButton(
               onPressed: () {},
               child: const Text(

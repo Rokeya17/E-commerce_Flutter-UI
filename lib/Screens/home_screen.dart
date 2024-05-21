@@ -49,9 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisSpacing: 8,
         ),
         itemBuilder: (context, index) {
-          return const FittedBox(
-            child: ProductCard(),
-          );
+          return const FittedBox(child: ProductCard());
         },
         itemCount: 4,
       ),

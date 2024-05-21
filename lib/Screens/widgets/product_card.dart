@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../utility/appcolors.dart';
 import '../../utility/imageasset.dart';
 import '../addtocart_screen.dart';
-import '../productdetails_screen.dart'; // Import the AddToCartScreen
+import '../productdetails_screen.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class ProductCard extends StatelessWidget {
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         child: SizedBox(
-          width: 150,
+          width: 120,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

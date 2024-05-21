@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utility/appcolors.dart';
-import 'productcart_screen.dart'; // Importing CartProductScreen if necessary
+import 'cartproduct_screen.dart';
 
 class AddToCartScreen extends StatefulWidget {
   final List<double> prices;
@@ -14,7 +14,6 @@ class AddToCartScreen extends StatefulWidget {
 
 class _AddToCartScreenState extends State<AddToCartScreen> {
   double calculateTotalPrice() {
-    // Summing up prices of all items in the cart
     return widget.prices
         .fold(0, (previousValue, price) => previousValue + price);
   }
@@ -31,8 +30,7 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context)
-                .pop(); // Navigate back when back arrow is pressed
+            Navigator.of(context).pop();
           },
           icon: const Icon(
             Icons.arrow_back,
@@ -46,7 +44,6 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
             child: ListView.builder(
               itemCount: widget.prices.length,
               itemBuilder: (context, index) {
-                // If you're using CartProductScreen, pass the price here
                 return CartProductScreen(price: widget.prices[index]);
               },
             ),
