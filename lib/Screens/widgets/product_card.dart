@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../utility/appcolors.dart';
@@ -11,10 +10,7 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String assetName = ImageAssets.dressSVG;
-    final Widget svg = SvgPicture.asset(
-      assetName,
-    );
+    const String assetName = ImageAssets.dressJPG;
 
     return InkWell(
       onTap: () {
@@ -33,12 +29,17 @@ class ProductCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  height: 50,
+                  height: 100,
                   child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(8),
-                          topRight: Radius.circular(8)),
-                      child: svg),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(8),
+                    ),
+                    child: Image.asset(
+                      assetName,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -48,8 +49,9 @@ class ProductCard extends StatelessWidget {
                 "Women’s Dress ",
                 maxLines: 1,
                 style: TextStyle(
-                    overflow: TextOverflow.ellipsis,
-                    fontWeight: FontWeight.w500),
+                  overflow: TextOverflow.ellipsis,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,9 +59,10 @@ class ProductCard extends StatelessWidget {
                   const Text(
                     'USD950.00',
                     style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.primaryColor),
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                   Wrap(
                     crossAxisAlignment: WrapCrossAlignment.center,

@@ -1,9 +1,9 @@
 import 'package:ecom_ui/Screens/relatedproducts_screen.dart';
-import 'package:ecom_ui/Screens/widgets/productimage_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../utility/appcolors.dart';
 import 'widgets/customstepper.dart';
+import 'widgets/productimage_slider.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({Key? key}) : super(key: key);
@@ -32,8 +32,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // AppBar
-
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -46,14 +44,60 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Expanded(
-                            child: Text(
-                              "demooo ",
-                              maxLines: 2,
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                              ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Women's casual dress ",
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                const Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'sddbshfjnjd',
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 10),
+                                    ),
+                                    SizedBox(
+                                      width: 16,
+                                    ),
+                                    Text(
+                                      '4 hours ago',
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 10),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                Row(
+                                  children: [
+                                    Wrap(
+                                      crossAxisAlignment:
+                                          WrapCrossAlignment.center,
+                                      children: List.generate(5, (index) {
+                                        return Icon(
+                                          Icons.star,
+                                          color: index < 4
+                                              ? Colors.amber
+                                              : Colors.grey,
+                                          size: 16,
+                                        );
+                                      }),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    const Text('348590'),
+                                  ],
+                                )
+                              ],
                             ),
                           ),
                           CustomStepper(
@@ -62,27 +106,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             stepValue: 1,
                             value: 1,
                             onChange: (newValue) {},
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Description",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Text(
-                            "Being a fashion girl doesn't only mean that you meticulously follow all the celeb trends or that you wear expensive designer labels. You're also very in-tune with your personal sense of style. Simply put, you know what you like and every outfit that you wear demonstrates your own unique perspective.",
-                            style: TextStyle(fontSize: 14),
                           ),
                         ],
                       ),
@@ -118,8 +141,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                       child: Container(
                                         margin:
                                             const EdgeInsets.only(right: 8.0),
-                                        width: 25,
-                                        height: 25,
+                                        width: 20,
+                                        height: 20,
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: color,
@@ -162,8 +185,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                       },
                                       child: Container(
                                         alignment: Alignment.center,
-                                        width: 25,
-                                        height: 25,
+                                        width: 20,
+                                        height: 20,
                                         margin:
                                             const EdgeInsets.only(right: 10),
                                         decoration: BoxDecoration(
@@ -184,6 +207,34 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   }).toList(),
                                 ),
                               ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Product Details",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            "Being a fashion girl doesn't only mean that you meticulously follow all the celeb trends or that you wear expensive designer labels. You're also very in-tune with your personal sense of style. Simply put, you know what you like and every outfit that you wear demonstrates your own unique perspective.",
+                            style: TextStyle(fontSize: 14),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              '...more',
+                              style: TextStyle(color: AppColors.primaryColor),
                             ),
                           ),
                         ],
