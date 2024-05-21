@@ -5,5 +5,6 @@ A new Flutter project.
 ## Screensorts
 ![img.png](img.png)
 <img width="200" alt="Screenshot_1" src="https://github.com/Rokeya17/E-commerce_Flutter-UI/assets/135530632/c9d2ac17-dc88-4faf-9d05-70bd9c202695">
-![Uploading Screenshot_2.png…]()
+<img width="193" alt="Screenshot_2" src="https://github.com/Rokeya17/E-commerce_Flutter-UI/assets/135530632/dfc9d165-116d-4c85-bb0a-371477967a5d">
+
 
