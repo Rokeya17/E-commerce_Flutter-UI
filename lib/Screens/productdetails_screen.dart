@@ -237,6 +237,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           //     style: TextStyle(color: AppColors.primaryColor),
                           //   ),
                           // ),
+                          Text(''),
                         ],
                       ),
                     ),
