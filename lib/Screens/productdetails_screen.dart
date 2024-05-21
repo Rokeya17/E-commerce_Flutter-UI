@@ -1,9 +1,9 @@
-import 'package:ecom_ui/Screens/relatedproducts_screen.dart';
+import 'package:ecom_ui/Screens/relatedproducts_widget.dart';
+import 'package:ecom_ui/Screens/widgets/productimage_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../utility/appcolors.dart';
 import 'widgets/customstepper.dart';
-import 'widgets/productimage_slider.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({Key? key}) : super(key: key);
@@ -238,7 +238,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           //   ),
                           // ),
                           Divider(),
-                          Row(
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
@@ -251,7 +252,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 16,
                                   ),
                                   Text('Negotiable'),
-                                  Divider(),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
                                   Text(
                                     'Type:',
                                     style: TextStyle(
@@ -261,6 +266,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 16,
                                   ),
                                   Text('Classic shoes'),
+                                ],
+                              ),
+                              Row(
+                                children: [
                                   Text(
                                     'Material:',
                                     style: TextStyle(
@@ -270,6 +279,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 16,
                                   ),
                                   Text('Plastic Material'),
+                                ],
+                              ),
+                              Row(
+                                children: [
                                   Text(
                                     'Design:',
                                     style: TextStyle(
@@ -281,6 +294,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   Text('Modern nice'),
                                 ],
                               ),
+                              Divider(),
                             ],
                           ),
                         ],
