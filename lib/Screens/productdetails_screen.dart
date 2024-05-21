@@ -230,13 +230,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             "Being a fashion girl doesn't only mean that you meticulously follow all the celeb trends or that you wear expensive designer labels. You're also very in-tune with your personal sense of style. Simply put, you know what you like and every outfit that you wear demonstrates your own unique perspective.",
                             style: TextStyle(fontSize: 14),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              '...more',
-                              style: TextStyle(color: AppColors.primaryColor),
-                            ),
-                          ),
+                          // TextButton(
+                          //   onPressed: () {},
+                          //   child: const Text(
+                          //     '...more',
+                          //     style: TextStyle(color: AppColors.primaryColor),
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
