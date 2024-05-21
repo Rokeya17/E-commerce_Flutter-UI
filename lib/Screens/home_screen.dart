@@ -1,6 +1,7 @@
 import 'package:ecom_ui/Screens/widgets/product_card.dart';
-import 'package:ecom_ui/utility/circular_iconbutton.dart';
 import 'package:flutter/material.dart';
+
+import '../utility/circular_iconbutton.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,21 +30,48 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.rocket,
             onTap: () {},
           ),
-          const SizedBox(width: 8),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
+      body: DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0,
+            bottom: const TabBar(
+              tabs: [
+                Tab(
+                  icon: Icon(Icons.home),
+                ),
+                Tab(
+                  icon: Icon(Icons.video_collection_outlined),
+                ),
+                Tab(
+                  icon: Icon(Icons.delivery_dining),
+                ),
+                Tab(
+                  icon: Icon(Icons.notifications),
+                ),
+                Tab(
+                  icon: CircleAvatar(),
+                ),
+              ],
+            ),
           ),
-          itemBuilder: (context, index) {
-            return const ProductCard();
-          },
-          itemCount: 6,
+          body: TabBarView(
+            children: [
+              GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                ),
+                itemBuilder: (context, index) {
+                  return const ProductCard();
+                },
+                itemCount: 6,
+              ),
+            ],
+          ),
         ),
       ),
     );

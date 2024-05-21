@@ -191,9 +191,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                             const EdgeInsets.only(right: 10),
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
-                                          color: _selectedSizeIndex == index
-                                              ? colorsList[_selectedColorIndex]
-                                              : Colors.grey[300],
+                                          // color: _selectedSizeIndex == index
+                                          //     ? colorsList[_selectedColorIndex]
+                                          //     : Colors.grey[300],
                                           border: Border.all(
                                             color: _selectedSizeIndex == index
                                                 ? Colors.blue
@@ -292,6 +292,54 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 16,
                                   ),
                                   Text('Modern nice'),
+                                ],
+                              ),
+                              Divider(),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Customization:',
+                                    style: TextStyle(
+                                      color: AppColors.primaryColor,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                      'Customized logo and design custom packages',
+                                      style: TextStyle(
+                                        color: AppColors.primaryColor,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Brand:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('Samsung'),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Warranty:',
+                                    style: TextStyle(
+                                        color: AppColors.primaryColor),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  Text('2 years full warranty'),
                                 ],
                               ),
                               Divider(),
