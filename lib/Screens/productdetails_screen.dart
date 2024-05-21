@@ -47,7 +47,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const ProductimageSlider(),
+                    const ProductImageSlider(),
                     const SizedBox(height: 16),
                     Padding(
                       padding: const EdgeInsets.all(8.0),

@@ -19,39 +19,32 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.add,
             onTap: () {},
           ),
-          const SizedBox(
-            width: 08,
-          ),
+          const SizedBox(width: 8),
           CircularIconButton(
             icon: Icons.search,
             onTap: () {},
           ),
-          const SizedBox(
-            width: 08,
-          ),
+          const SizedBox(width: 8),
           CircularIconButton(
             icon: Icons.rocket,
             onTap: () {},
           ),
-          const SizedBox(
-            width: 08,
-          ),
-          CircularIconButton(
-            icon: Icons.add,
-            onTap: () {},
-          ),
+          const SizedBox(width: 8),
         ],
       ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
+          ),
+          itemBuilder: (context, index) {
+            return const ProductCard();
+          },
+          itemCount: 6,
         ),
-        itemBuilder: (context, index) {
-          return const FittedBox(child: ProductCard());
-        },
-        itemCount: 4,
       ),
     );
   }

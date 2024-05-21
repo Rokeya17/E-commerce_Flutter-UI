@@ -14,9 +14,9 @@ class RelatedProductScreen extends StatelessWidget {
         child: SafeArea(
           child: Row(
             children: [
-              Container(
+              const SizedBox(
                 width: 150,
-                child: const Text(
+                child: Text(
                   'Related Products',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
