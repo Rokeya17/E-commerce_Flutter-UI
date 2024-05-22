@@ -30,19 +30,17 @@ class ProductCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 50,
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(8),
-                    ),
-                    child: Image.asset(
-                      assetName,
-                      fit: BoxFit.cover,
-                    ),
+              SizedBox(
+                height: 70,
+                width: double.infinity,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8),
+                    topRight: Radius.circular(8),
+                  ),
+                  child: Image.asset(
+                    assetName,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
