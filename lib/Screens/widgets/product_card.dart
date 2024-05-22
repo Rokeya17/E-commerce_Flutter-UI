@@ -8,6 +8,10 @@ import '../productdetails_screen.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
 
+  // final String assetName = ImageAssets.dressJPG;
+  // final Widget svg = SvgPicture.asset(
+  //   assetName,
+  // );
   @override
   Widget build(BuildContext context) {
     const String assetName = ImageAssets.dressJPG;
@@ -79,14 +83,21 @@ class ProductCard extends StatelessWidget {
               const SizedBox(
                 height: 8,
               ),
-              TextButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  backgroundColor: AppColors.primaryColor,
-                ),
-                child: const Text(
-                  'Add to Cart',
-                  style: TextStyle(color: Colors.white),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    backgroundColor: AppColors.primaryColor,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    'Add to Cart',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ],
